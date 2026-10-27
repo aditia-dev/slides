@@ -2,6 +2,6 @@
   "name": "slides",
   "private": true,
   "scripts": {
-    "build": "npm run build"
+    "build": "npm --prefix ./20261029-thesis-proposal-seminar install && npm --prefix ./20261029-thesis-proposal-seminar run build"
   }
 }
