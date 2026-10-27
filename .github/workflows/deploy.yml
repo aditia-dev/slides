@@ -20,25 +20,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 'lts/*'
           cache: 'pnpm'
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build all slides
-        run: pnpm run build # Ini akan memicu build di semua folder workspace
+        run: pnpm run build  # Trigger build in every workspace
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist # Upload folder 'dist' root yang sudah berisi semua sub-folder
+          path: dist # Upload 'dist' root folder
 
   deploy:
     environment:
