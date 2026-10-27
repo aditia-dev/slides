@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build --base /slides/20261029-thesis-proposal-seminar/ --out ../../dist/20261029-thesis-proposal-seminar",
+    "build": "slidev build --base /slides/20261029-thesis-proposal-seminar/ --out ../dist/20261029-thesis-proposal-seminar",
     "dev": "slidev --open",
     "export": "slidev export"
   },
