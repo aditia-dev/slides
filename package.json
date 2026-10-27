@@ -2,6 +2,6 @@
   "name": "slides",
   "private": true,
   "scripts": {
-    "build": "pnpm -r run build"
+    "build": "npm run build"
   }
 }
